@@ -13,12 +13,21 @@ s = False
 #login
 @bot.event
 async def on_ready():
-    await bot.change_presence(activity=discord.CustomActivity(name='Under maintenence'))
-    #activity=discord.Activity(type=discord.ActivityType.listening, name="j!guide")
-    #await bot.change_presence(status=discord.Status.idle, activity=activity)
+   
+    activity=discord.Activity(type=discord.ActivityType.listening, name="j!guide")
+    await bot.change_presence(status=discord.Status.idle, activity=activity)
     print("Juan is online")
 
-
+    #specials
+    '''wish = discord.Embed(
+      title = "**MERRY CHRISTMAS !**",
+      description = "Santa's third most preferred mode of transport after Rudolph and Harley Davidson",
+      colour = discord.Colour.red()
+    )
+    wish.set_image(url="https://c.tenor.com/7rbwjUolqgIAAAAC/christmas-horse.gif")
+    
+    for guild in bot.guilds:
+      await guild.text_channels[0].send(embed = wish)'''
 
 #bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="a song"))
 
