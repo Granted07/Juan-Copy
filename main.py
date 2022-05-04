@@ -3,8 +3,8 @@ from discord.ext import commands
 from run247 import keep_alive
 import helpd
 import os
-global i
-i = 0
+
+
 
 
 bot = commands.Bot(command_prefix="j!")
@@ -78,7 +78,7 @@ async def ban(ctx , member:discord.Member , *, reason=None):
     
     
     banned = discord.Embed(
-          title = "LOL GANDU :rofl:",
+          title = ":rofl:",
           colour = discord.Colour.red()
         )
     banned.add_field(name = 
@@ -133,7 +133,7 @@ async def kick(ctx , member:discord.Member , *, reason=None):
 
     await member.send(embed =kickmsg)
 
-
+ 
 
 
 
@@ -180,18 +180,28 @@ async def stopspam(ctx):
   
 @bot.command()
 async def pingspam(ctx , member: discord.Member , *, n=0):
-    loop = True
-    for i in range(n):
-      print(loop)
-      if loop ==  True:
-          await ctx.send(member.mention)
-      elif loop == False:
-          continue
+    if n>=25 :
+      beshispam = discord.Embed(
+        colour = discord.Colour.red()
+       )
+      beshispam.set_image(url="https://c.tenor.com/liyOQm1y4J0AAAAC/horse-slap.gif")
+      await ctx.send(embed = beshispam)
+                            
+    else:
+      loop = True
+      for i in range(n):
+        print(loop)
+        if loop ==  True:
+            await ctx.send(member.mention)
+        elif loop == False:
+            continue
 
       
          
+#@bot.command()
+#async def banword(ctx ,*, member: discord.Member):
 
-
+  
 
 
 #fun
