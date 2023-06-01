@@ -48,7 +48,7 @@ async def guide(ctx):
   value= helpd.f1 , inline=False),
   # helpmsg.add_field(name="Admin:",
   # value= helpd.f2 , inline=False)
-  helpmsg.add_field(name="utility:", 
+  helpmsg.add_field(name="Utility:", 
   value = helpd.f3 , inline = False)
   await ctx.respond(embed = helpmsg)
 
